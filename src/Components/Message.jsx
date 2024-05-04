@@ -1,4 +1,4 @@
 function Message() {
-return <p className="message">Enjoy Day</p>
+  return <p className="message">Enjoy The Day</p>;
 }
 export default Message;

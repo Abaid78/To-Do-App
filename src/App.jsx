@@ -6,13 +6,13 @@ import "./App.css";
 import { useState } from "react";
 function App() {
   const [itemsData, setItemsData] = useState([]);
-  console.log(itemsData.length, "itemsDataLenght");
   const AddNewItem = (name, date) => {
-    let newItemsData = [...itemsData, { name: name, dueDate: date }];
-    setItemsData(newItemsData);
+    if (name != "" && date != "") {
+      let newItemsData = [...itemsData, { name: name, dueDate: date }];
+      setItemsData(newItemsData);
+    }
   };
   function handleDeleteItem(itemName) {
-    console.log(itemName, "itemname");
     const newTodoItems = itemsData.filter((item) => item.name !== itemName);
     setItemsData(newTodoItems);
   }

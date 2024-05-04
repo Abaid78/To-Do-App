@@ -1,8 +1,8 @@
 import PropTypes from "prop-types";
 import { useState } from "react";
 function AddTodo({ onNewItem }) {
-  let [name, setName] = useState();
-  let [date, setDate] = useState();
+  let [name, setName] = useState("");
+  let [date, setDate] = useState("");
   const handleNameChange = (event) => {
     setName(event.target.value);
   };
@@ -12,8 +12,8 @@ function AddTodo({ onNewItem }) {
   };
   const handleAddButtonClicked = () => {
     onNewItem(name, date);
-    setName();
-    setDate();
+    setName("");
+    setDate("");
   };
   return (
     <div className="add_todo">
@@ -21,7 +21,7 @@ function AddTodo({ onNewItem }) {
         <input
           value={name}
           type="text"
-          placeholder="Enter To DO Items"
+          placeholder="Enter items"
           onChange={(event) => {
             handleNameChange(event);
           }}
