@@ -1,0 +1,33 @@
+.add_todo {
+  width: 50vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px; /* For Better responsive*/
+}
+
+.todo_item {
+  width: 50vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 105px; /* For Better responsive*/
+  margin: 20px;
+}
+
+.add_btn {
+  width: 70px;
+  border-radius: 5px;
+  height: 30px;
+  background-color: #13762ce3;
+}
+.delete_btn {
+  width: 70px;
+  border-radius: 5px;
+  height: 30px;
+  background-color: #b74141;
+}
+.message {
+  font-weight: 600;
+  font-size: large;
+}
